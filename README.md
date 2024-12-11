@@ -17,7 +17,7 @@
   * Real=float
   * text= not limited string
   * char= string can be limited length =char(50)
-* to create new table:
+* to create new table (page 28):
   ```
   CREATE TABLE company(
 ID INT PRIMARY KEY NOT NULL,
@@ -33,7 +33,7 @@ DROP TABLE company
 ```
 * to insert new row to company table(page 39):
 
-  ```
+```
 insert into company
 (col1,col2,... colN) -- optionaly
 values(val1,val2,... valueN)
