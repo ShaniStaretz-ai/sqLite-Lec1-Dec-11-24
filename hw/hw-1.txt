@@ -1,0 +1,61 @@
+
+--1.a. create new table name 'shopping'
+
+CREATE TABLE shopping (id INTEGER PRIMARY KEY, name TEXT, amount INTEGER);
+
+--1.2. delete table name 'shopping'
+
+DROP TABLE shopping
+
+--2.a rename 'shopping' table's name to 'shopp'
+
+ALTER table shopping rename to shopp
+
+--2.b rename 'shopp' table's name to 'shopping'
+
+ALTER table shopp rename to shopping
+
+--3. insert rows into table 'shopping'
+
+--3.a add item to 'shopping' table with values:id=1, name='Avokado', amount=5
+INSERT INTO shopping VALUES (1, 'Avokado', 5);
+
+--3.b add item to 'shopping' table with values:id=1, name='Milk', amount=2
+INSERT INTO shopping VALUES (2, 'Milk', 2);
+
+--3.c add item to 'shopping' table with values:id=1, name='Bread', amount=3
+INSERT INTO shopping VALUES (3, 'Bread', 3);
+
+--3.d add item to 'shopping' table with values:id=1, name='Chocolate', amount=8
+INSERT INTO shopping VALUES (4, 'Chocolate', 8);
+
+--3.e add item to 'shopping' table with values:id=1, name='Bamba', amount=5
+INSERT INTO shopping VALUES (5, 'Bamba', 5);
+
+--3.f add item to 'shopping' table with values:id=1, name='Orange', amount=10
+INSERT INTO shopping VALUES (6, 'Orange', 10);
+
+--4. get all data in 'shopping' table
+
+SELECT * FROM shopping
+
+--5. get data on for columns 'id','name' from 'shopping' table
+SELECT id,name FROM shopping
+
+--6. get data from 'shopping' table by conditions:
+
+--6.a. get items, if item's 'amount' value bigger than 5,not including
+SELECT * FROM shopping WHERE amount > 5
+
+--6.b. get items, if item's 'amount' value equal to 2
+SELECT * FROM shopping WHERE amount = 2
+
+--6.c. get items, if item's 'name' value based on exact 'Bamba' pattern
+SELECT * FROM shopping WHERE name LIKE 'Bamba'
+
+
+
+
+
+
+
