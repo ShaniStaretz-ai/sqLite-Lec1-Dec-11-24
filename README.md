@@ -1,4 +1,4 @@
-# test-sqLite
+# Start-sqLite
 
 ## subjects learned:
 * project contain many databases
@@ -46,6 +46,28 @@
   ```
   **NOT Good Practice: if without specify the column names, need to send all values with the exact order.
   ** better to specify the columns name
+* insert many rows to table - 3 options:
+  * send many values:
+  ```
+  INSERT INTO 'tablename' ('column1', 'column2') VALUES
+  ('data1', 'data2'),
+  ('data3', 'data4'),
+  ('data5', 'data6'),
+  ('data7', 'data8');
+  ```
+  * with BEGIN TRANSACTION; and COMMIT:
+  ```
+  BEGIN TRANSACTION;
+  INSERT INTO .....;
+  INSERT INTO .....;
+  INSERT INTO .....;
+  COMMIT;
+  ```
+  * from other SELECT query:
+    ```
+    INSERT INTO 'tablename' ('column1', 'column2')
+    SELECT val1,val2 FROM other_table WHERE condition
+    ```
 * info about the table- will return the table structure:
   ```
   pragma table_info('company')
